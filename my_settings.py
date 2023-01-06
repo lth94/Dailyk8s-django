@@ -3,8 +3,9 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": 'lth_db',
         'USER': 'root',
+        'PASSWORD': 'qwer1234',
         'HOST': '14.63.162.213',
-        'PORT': '3306',
+        'PORT': '32427',
     }
 }
 
