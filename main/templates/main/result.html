@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <br> <div><b>NO.{{pnum}}</b> {{problem}}</div> <br>
+<div>
+</div> <br>
+	정답: {{answer}} <br>
+<a href="{% url 'index' %}" >다른 문제</a>
+{% endblock %}

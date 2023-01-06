@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <br>
+    내가 푼 문제 개수: {{ nsolved }}
+    <br>
+    <br>
+    <form action="{% url 'index' %}" method="get">
+    {% csrf_token %}
+    {% for i in pklst %}
+    <button class="btn btn-primary" type="submit" name="pnum" value="{{ i }}" style="margin-top: 10px">{{ i }}</button>
+    {% endfor %}
+    </form>
+
+    <br>
+    내가 풀지 않은 문제 개수: {{ nnsolved }}
+    <br>
+    <br>
+    <form action="{% url 'index' %}" method="get">
+    {% csrf_token %}
+    {% for i in npklst %}
+    <button class="btn btn-danger" type="submit" name="pnum" value="{{ i }}" style="margin-top: 10px">{{ i }}</button>
+    {% endfor %}
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    * {
+      font-size: 16px;
+      font-family: Consolas, sans-serif;
+    }
+    textarea {
+      width: 80%;
+      height: 100px;
+    }
+  </style>
+<div class="container">
+    <br>
+    <b>문제</b>
+    <form action= "{% url 'posting' %}" method="post">
+    {% csrf_token %}
+    <textarea placeholder="문제를 입력하세요." name="problem" class="form-control"></textarea>
+    <br>
+    <b>답</b>
+    <br>
+    <textarea placeholder="답을 입력하세요." name="answer" class="form-control"></textarea>
+    <br>
+    <br>
+    <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+
+{% endblock %}

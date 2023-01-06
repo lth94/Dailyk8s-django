@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    form {
+        display: inline;
+    }
+</style>
+    <div class="container">
+        <br> <div clas="jumbotron"><b>NO.{{pnum}}</b> {{problem}}</div> <br>
+    <form action= "{% url 'result' %}" method="get">
+    <input type="hidden" name="answer" value="{{answer}}">
+    <input type="hidden" name="pnum" value="{{pnum}}">
+    <input type="submit" class="btn btn-primary" value="답 확인">
+    </form>
+    {% if user.is_authenticated %}
+    <form action= "{% url 'userstat:solved' %}" method="get">
+        <input type="hidden" name="pnum" value="{{pnum}}">
+        <input type="submit" class="btn btn-primary" value="풀었음">
+    </form>
+    <form action= "{% url 'posting' %}" method="get">
+        <input type="submit" class="btn btn-primary" value="문제 올리기">
+    </form>
+    {% endif %}
+    </div>
+
+{% endblock %}
