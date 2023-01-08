@@ -5,7 +5,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'qwer1234',
         'HOST': '172.27.0.190',
-        'PORT': '3306',
+        'PORT': '32427',
     }
 }
 
