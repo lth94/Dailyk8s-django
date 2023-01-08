@@ -4,8 +4,8 @@ DATABASES = {
         "NAME": 'lth_db',
         'USER': 'root',
         'PASSWORD': 'qwer1234',
-        'HOST': '14.63.162.213',
-        'PORT': '32427',
+        'HOST': '172.27.0.0/24',
+        'PORT': '3306',
     }
 }
 
