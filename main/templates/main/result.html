@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <br> <div><b>NO.{{pnum}}</b> {{problem}}</div> <br>
+    <br> <div><b>NO.{{pnum}}</b> <pre>{{problem}} </pre></div> <br>
 <div>
 </div> <br>
-	정답: {{answer}} <br>
+	<b>정답</b>:<pre>{{answer}}</pre>  <br>
 <a href="{% url 'index' %}" >다른 문제</a>
 {% endblock %}

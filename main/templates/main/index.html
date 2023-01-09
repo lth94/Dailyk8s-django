@@ -6,7 +6,7 @@
     }
 </style>
     <div class="container">
-        <br> <div clas="jumbotron"><b>NO.{{pnum}}</b> {{problem}}</div> <br>
+        <br> <div clas="jumbotron"><b>NO.{{pnum}}</b> <pre>{{problem}}</pre></div> <br>
     <form action= "{% url 'result' %}" method="get">
     <input type="hidden" name="answer" value="{{answer}}">
     <input type="hidden" name="pnum" value="{{pnum}}">
