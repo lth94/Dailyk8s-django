@@ -1,11 +1,11 @@
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": 'lth_db',
+        "NAME": 'project_db',
         'USER': 'root',
         'PASSWORD': 'qwer1234',
-        'HOST': '172.27.0.190',
-        'PORT': '32427',
+        'HOST': '172.27.0.87',
+        'PORT': '31822',
     }
 }
 
